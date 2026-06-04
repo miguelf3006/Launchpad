@@ -721,6 +721,211 @@ img { display: block; max-width: 100%; }
 /* ---- Inline SVG icon helper ---- */
 .icon { display: inline-block; vertical-align: middle; flex-shrink: 0; }
 
+/* ============================================================
+   Dark mode — system-driven via prefers-color-scheme
+   All values derived from the Launchpad brand design system.
+   Rule: on dark, Lilac Rose → Lavender (design system spec:
+   "Lavender, never Lilac Rose on dark — contrast too low").
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+
+  /* Tell the browser to render native controls (scrollbars, inputs)
+     in dark mode — pairs with the <meta name="color-scheme"> in HTML */
+  :root { color-scheme: dark; }
+
+  /* ---- Raw palette additions for dark surfaces ---- */
+  :root {
+    /* New dark-only surface ramps (Ink hue, varied lightness) */
+    --dark-base:    #1A1225;   /* deepest bg — Ink hue, very dark        */
+    --dark-raised:  #221830;   /* alt section bg (proof bar, how-it-works)*/
+    --dark-surface: #2E2240;   /* card / modal surface — above base       */
+    --dark-body-fg: #C8B8D8;   /* body text — lavender-grey, 4.8:1 ratio  */
+  }
+
+  /* ---- Semantic token overrides ---- */
+  :root {
+    /* Backgrounds */
+    --bg:      var(--dark-base);
+    --bg-alt:  var(--dark-raised);
+    --bg-tint: var(--dark-surface);  /* mist-tinted fills → darkened equivalent */
+    --surface: var(--dark-surface);  /* cards, modals, inputs                   */
+
+    /* Foregrounds */
+    --fg:            var(--linen);         /* #FAF8F4 — warm off-white, not pure */
+    --fg-body:       var(--dark-body-fg);  /* #C8B8D8 — lavender-grey body copy  */
+    --fg-muted:      var(--stone);         /* #9B8FAA — captions (AA-Large only) */
+
+    /* Accent — Lilac Rose is too low-contrast on dark (design system rule) */
+    --accent:        var(--lavender);      /* #D49CCF replaces Lilac Rose on dark */
+    --accent-hover:  var(--linen);         /* go lighter on hover                 */
+
+    /* Borders */
+    --border:        rgba(212, 156, 207, 0.20);  /* Lavender at low opacity */
+    --border-strong: var(--lavender);             /* #D49CCF                 */
+
+    /* Shadow — deeper on dark */
+    --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.35);
+
+    /* Status tokens — darkened for dark surfaces */
+    --success-bg: #1B3D1E;
+    --success-fg: #5CB85C;
+  }
+
+  /* ---- Nav ---- */
+  /* .nav uses var(--linen) directly — needs explicit override */
+  .nav {
+    background: var(--dark-base);
+    border-bottom-color: var(--border);
+  }
+  .nav__logo-text       { color: var(--linen); }
+  .nav__logo-text em    { color: var(--lavender); }
+  .nav__links a         { color: var(--stone); }
+  .nav__links a:hover,
+  .nav__links a.active  { color: var(--linen); }
+
+  /* ---- Buttons ---- */
+  /* btn--primary stays Lilac Rose (brand accent button — bg, not text) */
+  .btn--primary   { background: var(--lilac-rose); color: var(--linen); }
+  .btn--secondary { background: var(--dark-surface); color: var(--lavender); }
+  .btn--outline   {
+    color: var(--linen);
+    border-color: var(--lavender);
+  }
+  .btn--ghost {
+    color: var(--lavender);
+    border-color: rgba(212, 156, 207, 0.45);
+  }
+
+  /* ---- Badges ---- */
+  .badge--default  { background: var(--dark-surface); color: var(--lavender); }
+  /* badge--featured (Ink bg / Linen text) already inverts nicely — but Ink on
+     dark would disappear; swap to a lavender-tinted surface */
+  .badge--featured { background: rgba(212, 156, 207, 0.18); color: var(--linen); }
+  .badge--live     { background: var(--success-bg); color: var(--success-fg); }
+
+  /* ---- Hero — live panel ---- */
+  .live-panel {
+    background: var(--dark-surface);
+    border: 1px solid var(--border);
+  }
+  .live-panel__title    { color: var(--linen); }
+  .live-panel__subtitle { color: var(--stone); }
+
+  /* Status cards inside live panel */
+  .status-card {
+    background: var(--dark-raised);
+    border-color: var(--border);
+  }
+  .status-card__icon  { background: var(--dark-base); }
+  .status-card__label { color: var(--linen); }
+  .status-card__meta  { color: var(--stone); }
+
+  /* ---- Proof bar ---- */
+  /* .proof-bar uses var(--cream) → now maps to --bg-alt which is --dark-raised */
+  .proof-bar { background: var(--bg-alt); }
+  .proof-stat__number { color: var(--linen); }
+  .proof-stat__label  { color: var(--dark-body-fg); }
+
+  /* ---- Service cards ---- */
+  /* Standard cards float above bg */
+  .service-card {
+    background: var(--dark-surface);
+    border-color: var(--border);
+  }
+  .service-card__icon  { background: var(--dark-base); }
+  .service-card__title { color: var(--linen); }
+  .service-card__body  { color: var(--stone); }
+  .service-card__link  { color: var(--lavender); }
+
+  /* Featured (Ink bg) card — keeps its dark treatment, minor tweaks */
+  .service-card--featured {
+    background: var(--dark-base);
+    border: 1px solid var(--border);
+  }
+  .service-card--featured .service-card__icon {
+    background: rgba(176, 91, 168, 0.25);
+  }
+
+  /* ---- How it works ---- */
+  .how-it-works { background: var(--bg-alt); }
+  .step-card {
+    background: var(--dark-surface);
+    border-color: var(--border);
+  }
+  .step-card__number { color: var(--lavender); }
+  .step-card__title  { color: var(--linen); }
+  .step-card__body   { color: var(--stone); }
+
+  /* ---- Testimonial ---- */
+  /* Already on Ink bg — just slightly deepen + ensure text passes */
+  .testimonial { background: var(--dark-base); }
+  .testimonial__quote       { color: var(--linen); }
+  .testimonial__quote .key-phrase { color: var(--lavender); }
+  .testimonial__attribution { color: var(--stone); }
+
+  /* ---- CTA section ---- */
+  .cta-section__body { color: var(--dark-body-fg); }
+  .cta-section__note { color: var(--stone); }
+
+  /* ---- Footer ---- */
+  /* Footer uses var(--ink) — already dark, but unify with dark base */
+  .footer { background: var(--dark-base); }
+  .footer__brand-tagline { color: var(--lavender); }
+  .footer__col-heading   { color: var(--stone); }
+  .footer__col a         { color: var(--lavender); }
+  .footer__col a:hover   { color: var(--linen); }
+  .footer__bottom {
+    border-top-color: rgba(212, 156, 207, 0.15);
+  }
+  .footer__bottom span { color: var(--stone); }
+
+  /* ---- Modal overlay & modal surface ---- */
+  .modal-overlay {
+    background: rgba(15, 10, 22, 0.72);  /* deeper scrim on dark */
+  }
+  .modal {
+    background: var(--dark-surface);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.55);
+  }
+  .modal__title  { color: var(--linen); }
+  .modal__body   { color: var(--dark-body-fg); }
+
+  /* ---- Form fields inside modal ---- */
+  .field__label { color: var(--dark-body-fg); }
+  .field__input,
+  .field__textarea {
+    background: var(--dark-base);
+    border-color: var(--border);
+    color: var(--linen);
+  }
+  .field__input::placeholder,
+  .field__textarea::placeholder { color: var(--stone); }
+  .field__input:focus,
+  .field__textarea:focus {
+    border-color: var(--lavender);
+    box-shadow: 0 0 0 3px rgba(212, 156, 207, 0.18);
+  }
+  .field__hint  { color: var(--stone); }
+  .field__error { color: #E57373; }   /* lightened red — passes 4.5:1 on dark */
+
+  /* ---- Confirm state ---- */
+  .confirm__icon  { background: var(--dark-base); }
+  .confirm__title { color: var(--linen); }
+  .confirm__body  { color: var(--dark-body-fg); }
+
+  /* ---- Typography helpers ---- */
+  .display, .headline-h1, .headline-h2, .headline-h3 { color: var(--fg); }
+  .caption  { color: var(--fg-muted); }
+  .eyebrow  { color: var(--lavender); }
+  .eyebrow.on-dark { color: var(--lavender); }
+  .on-dark .accent-word { color: var(--lavender); }
+
+  /* ---- Section headers ---- */
+  .hero__body       { color: var(--dark-body-fg); }
+  .hero__reassurance { color: var(--stone); }
+
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 860px) {
   .hero {
