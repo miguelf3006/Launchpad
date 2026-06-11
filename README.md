@@ -53,6 +53,12 @@ Then visit `http://localhost:8080`.
 
 **Operations Deck** replaces the older warm linen/lilac agency-style page with a stronger control-room concept.
 
+The logo direction uses the selected **D + 4** exploration:
+
+- `assets/launchpadpal-mark.svg` is the stacked setup-tile mark.
+- `assets/launchpadpal-logo.svg` is the compact framed wordmark lockup.
+- The site header uses the mark plus an HTML/CSS version of the compact framed wordmark for crisp rendering.
+
 Core tokens:
 
 | Role | Value |

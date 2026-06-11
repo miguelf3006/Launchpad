@@ -1,0 +1,15 @@
+<svg width="318" height="74" viewBox="0 0 318 74" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">LaunchpadPal logo</title>
+  <desc id="desc">Compact framed LaunchpadPal wordmark with stacked setup tile mark.</desc>
+  <rect x="2.5" y="10.5" width="313" height="51" rx="13.5" fill="#F7F4EE" stroke="#151623" stroke-width="3"/>
+  <path d="M18 49H26C26.5523 49 27 48.5523 27 48V40" stroke="#151623" stroke-width="2.7" stroke-linecap="round"/>
+  <path d="M28 40H36C36.5523 40 37 39.5523 37 39V31" stroke="#151623" stroke-width="2.7" stroke-linecap="round"/>
+  <path d="M38 31H46C46.5523 31 47 30.5523 47 30V22" stroke="#151623" stroke-width="2.7" stroke-linecap="round"/>
+  <rect x="15" y="44" width="12" height="12" rx="3.5" fill="#39C98A" stroke="#151623" stroke-width="2.4"/>
+  <rect x="25" y="35" width="12" height="12" rx="3.5" fill="#E5B454" stroke="#151623" stroke-width="2.4"/>
+  <rect x="35" y="26" width="12" height="12" rx="3.5" fill="#B86AD8" stroke="#151623" stroke-width="2.4"/>
+  <circle cx="47" cy="22" r="3.5" fill="#3CB7C8" stroke="#151623" stroke-width="2.2"/>
+  <text x="61" y="47" fill="#151623" font-family="Manrope, Avenir Next, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-1.25">Launchpad</text>
+  <text x="219" y="47" fill="#7F42A1" font-family="Manrope, Avenir Next, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="-1.25">Pal</text>
+  <circle cx="292" cy="56" r="5.5" fill="#39C98A" stroke="#151623" stroke-width="2.4"/>
+</svg>
