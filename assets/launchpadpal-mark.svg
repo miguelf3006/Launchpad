@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">LaunchpadPal mark</title>
+  <desc id="desc">A high-contrast launch path with three friendly checkpoints.</desc>
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="#F7F4EE" stroke="#151623" stroke-width="4"/>
+  <path d="M16 44C21.5 30.5 33 20.5 49 16" stroke="#151623" stroke-width="4.25" stroke-linecap="round"/>
+  <path d="M18 44L30 32L38 38L50 18" stroke="#7F42A1" stroke-width="4.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="18" cy="44" r="5.5" fill="#39C98A" stroke="#151623" stroke-width="3"/>
+  <circle cx="32" cy="30" r="5.5" fill="#E5B454" stroke="#151623" stroke-width="3"/>
+  <circle cx="50" cy="18" r="5.5" fill="#3CB7C8" stroke="#151623" stroke-width="3"/>
+</svg>

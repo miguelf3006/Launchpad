@@ -1,5 +1,5 @@
 /* ============================================================
-   LaunchPadPal - Operations Deck system
+   LaunchpadPal - Operations Deck system
    Premium calm control-room identity for a done-for-you studio.
    ============================================================ */
 
@@ -125,11 +125,11 @@ em {
 }
 
 .nav__logo-img {
-  background: var(--ink);
+  background: var(--paper);
   border-radius: var(--radius-md);
-  height: 30px;
-  padding: 4px;
-  width: 30px;
+  box-shadow: 0 0 0 1px rgba(21, 22, 35, 0.12);
+  height: 34px;
+  width: 34px;
 }
 
 .nav__logo-text {

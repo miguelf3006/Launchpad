@@ -1,8 +1,8 @@
-# LaunchPadPal - Marketing Website
+# LaunchpadPal - Marketing Website
 
-Static homepage for **LaunchPadPal**, a done-for-you digital operations studio for busy service owners.
+Static homepage for **LaunchpadPal**, a done-for-you digital setup studio for busy service owners.
 
-LaunchPadPal handles the online work that is easy to postpone: websites, social posts, follow-ups, approvals, and ongoing digital care. The current direction is **Operations Deck**: a premium-calm control-room experience that makes the handled-for-you work visible without making the customer learn new tools.
+LaunchpadPal handles the online work that is easy to postpone: websites, social posts, follow-ups, approvals, and ongoing care. The current direction is **Operations Deck**: a premium-calm proof system that makes the handled-for-you work visible without making the customer learn new tools.
 
 ---
 
@@ -70,9 +70,9 @@ Core tokens:
 
 The homepage should quickly communicate:
 
-- LaunchPadPal is the visible brand name.
+- LaunchpadPal is the visible brand name.
 - The customer gets a digital setup handled for them.
-- The work is concrete: website live, posts queued, follow-ups active, approvals pending.
+- The work is concrete: website live, posts queued, follow-ups active, and a short list of things that need their okay.
 - The CTA stays low-pressure: `Book a free chat`.
 
 ---
