@@ -1,12 +1,10 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">LaunchpadPal mark</title>
-  <desc id="desc">Three stacked setup tiles becoming a clear upward path.</desc>
-  <rect x="3" y="3" width="58" height="58" rx="14" fill="#F7F4EE" stroke="#151623" stroke-width="4"/>
-  <path d="M17 44H25C25.5523 44 26 43.5523 26 43V35" stroke="#151623" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M29 34H37C37.5523 34 38 33.5523 38 33V25" stroke="#151623" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M41 24H49C49.5523 24 50 23.5523 50 23V15" stroke="#151623" stroke-width="3.5" stroke-linecap="round"/>
-  <rect class="tile-a" x="13" y="37" width="14" height="14" rx="4" fill="#39C98A" stroke="#151623" stroke-width="3"/>
-  <rect class="tile-b" x="25" y="27" width="14" height="14" rx="4" fill="#E5B454" stroke="#151623" stroke-width="3"/>
-  <rect class="tile-c" x="37" y="17" width="14" height="14" rx="4" fill="#B86AD8" stroke="#151623" stroke-width="3"/>
-  <circle cx="50" cy="15" r="4" fill="#3CB7C8" stroke="#151623" stroke-width="2.5"/>
+  <desc id="desc">Three friendly setup tiles rising toward a connected signal point.</desc>
+  <rect x="5" y="5" width="54" height="54" rx="15" fill="#F7F4EE"/>
+  <path d="M43 23L50 16" stroke="#151623" stroke-width="4" stroke-linecap="round"/>
+  <rect class="tile-a" x="13" y="37" width="17" height="17" rx="4.5" fill="#86D9A8" stroke="#151623" stroke-width="3.2"/>
+  <rect class="tile-b" x="24" y="28" width="17" height="17" rx="4.5" fill="#F1C36A" stroke="#151623" stroke-width="3.2"/>
+  <rect class="tile-c" x="35" y="19" width="17" height="17" rx="4.5" fill="#B86AD8" stroke="#151623" stroke-width="3.2"/>
+  <circle cx="50" cy="16" r="7.5" fill="#73D0D8" stroke="#151623" stroke-width="3.2"/>
 </svg>
